@@ -1,8 +1,9 @@
 #####################################
 ##==> Variables
 #####################################
-function shenv; set -gx $argv; end
-source ~/.env
+function shenv
+    set -gx $argv
+end
 
 #####################################
 ##==> Aliases
@@ -11,6 +12,8 @@ alias cls="clear"
 alias g="git"
 alias n="nvim"
 alias m="micro"
+alias hyprcfg="nvim ~/.config/hypr"
+alias nvimcfg="nvim ~/.config/nvim"
 
 #####################################
 ##==> Custom Functions
@@ -34,8 +37,7 @@ end
 #####################################
 ##==> Shell Customization
 #####################################
-starship init fish | source
-set fish_greeting
+set fish_greeting ""
 
 #####################################
 ##==> Development Tools
@@ -46,4 +48,4 @@ pyenv init - | source
 #####################################
 ##==> Fun Stuff
 #####################################
-pokemon-colorscripts --no-title -s -r 1,3,6
+neofetch

@@ -52,6 +52,7 @@ window {
     box-shadow: 1px 1px 5px rgba(0,0,0, .5);
     border-radius:10;
     background-color: alpha(@background,.2);
+    border: 1px solid alpha(@foreground,0.075);
 }
 #input image {
     border: none;
@@ -66,7 +67,6 @@ window {
 #input:focus {
     outline: none;
     border: none;
-
     border-radius:10;
 }
 #text {
@@ -95,10 +95,10 @@ window {
     box-shadow: 1px 1px 5px rgba(255,255,255, .03);
     border: none;
     border-radius: 20px;
-    background-color:transparent;
+    background-color: alpha(@color11,.7);
 }
 #entry:selected #text {
-    color: @mauve;
+    color: white;
 }
 #entry:drop(active) {
     background-color: @lavender !important;
