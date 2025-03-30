@@ -18,4 +18,4 @@ cd $HOME/.cache
 mkdir wal
 cd wal
 touch mode
-echo "dark" >|${HOME}/.cache/wal
+echo "dark" >|${HOME}/.cache/wal/mode
