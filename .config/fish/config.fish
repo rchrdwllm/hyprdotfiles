@@ -1,6 +1,9 @@
 #####################################
 ##==> Variables
 #####################################
+set -Ux ANDROID_HOME $HOME/Android/Sdk
+set -Ux PATH $ANDROID_HOME/emulator $ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools $PATH
+
 function shenv
     set -gx $argv
 end

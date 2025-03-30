@@ -4,3 +4,4 @@
 vim.opt.termguicolors = true
 vim.opt.relativenumber = false
 vim.g.lazyvim_picker = "telescope"
+vim.o.shell = "fish"
