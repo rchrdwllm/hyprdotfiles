@@ -2,7 +2,7 @@
 ##==> Variables
 #####################################
 set -Ux ANDROID_HOME $HOME/Android/Sdk
-set -Ux PATH $ANDROID_HOME/emulator $ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools $PATH
+set -Ux PATH $ANDROID_HOME/emulator $ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools $PATH ~/.local/bin
 
 function shenv
     set -gx $argv
@@ -15,8 +15,8 @@ alias cls="clear"
 alias g="git"
 alias n="nvim"
 alias m="micro"
-alias hyprcfg="nvim ~/.config/hypr"
-alias nvimcfg="nvim ~/.config/nvim"
+alias hyprcfg="code ~/.config/hypr"
+alias nvimcfg="code ~/.config/nvim"
 
 #####################################
 ##==> Custom Functions
