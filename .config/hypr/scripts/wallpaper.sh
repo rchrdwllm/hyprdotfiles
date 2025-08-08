@@ -55,7 +55,18 @@ send_notification() {
 }
 
 apply_wal_theme() {
-  . "$APPLY_WAL_THEME_SCRIPT"
+	wal -i "$random_image" --cols16 -s -t
+
+	pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
+	
+    hellwal -i "$selected_wallpaper" --check-contrast
+
+    pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
+
+    walogram -s > /dev/null
+    spicetify apply -q -n
+    swaync-client -rs
+    swaync-client --reload-css
 }
 
 main() {
