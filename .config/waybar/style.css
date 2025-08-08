@@ -55,28 +55,28 @@ window#waybar {
 }
 
 #custom-launcher {
-  color: @color9;
+  color: @color6;
   padding: 0 20px 0 20px;
   margin-left: 8px;
 }
 
 #cpu {
-  color: @color10;
+  color: @color14;
 }
 
 #memory {
-  color: @color11;
+  color: @color4;
 }
 
 #workspaces button {
-  color: @color11;
+  color: @color5;
   box-shadow: inset 0 -3px transparent;
   margin-right: 0em;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
 }
 
 #workspaces button.active {
-  color: @color9;
+  color: @color14;
   margin-right: 0em;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
 }
@@ -113,7 +113,7 @@ window#waybar {
 }
 
 #custom-notifications {
-  color: @color11;
+  color: @color12;
 }
 
 #custom-theme {
@@ -167,7 +167,7 @@ window#waybar {
 }
 
 #battery {
-  color: @color9;
+  color: @color13;
   border-radius: 8px;
   padding: 0 12px;
 }
@@ -185,7 +185,7 @@ window#waybar {
 }
 
 #custom-power-menu {
-  color: @color11;
+  color: @color14;
   margin-right: 8px;
   padding: 0 12px 0 10px;
 }
