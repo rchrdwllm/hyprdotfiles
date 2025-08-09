@@ -82,6 +82,14 @@ apply_wal_theme() {
     swaync-client --reload-css
 }
 
+waybar_restart() {
+	if pgrep -x "waybar" >/dev/null; then
+		killall waybar
+	fi
+
+	waybar &
+}
+
 main() {
 	validate_image_directory
 
@@ -93,6 +101,7 @@ main() {
 
 	apply_wal_theme "$random_image"
 	set_new_wallpaper "$random_image"
+	waybar_restart
 	send_notification
 }
 

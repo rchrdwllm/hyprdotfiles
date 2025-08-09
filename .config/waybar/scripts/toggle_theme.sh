@@ -39,9 +39,18 @@ toggle_colors() {
     fi
 }
 
+waybar_restart() {
+	if pgrep -x "waybar" >/dev/null; then
+		killall waybar
+	fi
+
+	waybar &
+}
+
 main() {
     switch_theme
     toggle_colors
+    waybar_restart
 }
 
 main

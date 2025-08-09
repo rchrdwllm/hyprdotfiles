@@ -15,14 +15,18 @@ swww img ${DIR}/${RANDOMPICS} --transition-type grow --transition-fps 60 --trans
 
 sleep 1.25
 
-if [[ "$(<~/.cache/wal/mode )" = "dark" ]]; then
-  wal -i ${DIR}/${RANDOMPICS} --cols16
-elif [[ "$(<~/.cache/wal/mode )" = "light" ]]; then
-  wal -i ${DIR}/${RANDOMPICS} -l --cols16
-fi
+wal -i "$random_image" --cols16 -s -t
+
+pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
+	
+hellwal -i "$random_image" --check-contrast
+
+pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 
 pywal-discord -t default
-pywalfox update
-wal-telegram --wal
+walogram -s > /dev/null
+spicetify apply -q -n
+swaync-client -rs
+swaync-client --reload-css
 
 . $HOME/.config/mako/update-colors.sh
