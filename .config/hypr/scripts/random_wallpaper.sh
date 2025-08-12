@@ -58,19 +58,19 @@ apply_wal_theme() {
 	wallpaper="$1"
 
 	if [ "$MODE" = "light" ]; then
-		wal -i "$wallpaper" --cols16 -s -t -l
+		wal -i "$wallpaper" --cols16 -s -t -l --backend colorthief
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 	
-		hellwal -i "$wallpaper" --check-contrast --light
+		matugen image "$wallpaper" --show-colors --mode light
 
     	pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 	elif [ "$MODE" = "dark" ]; then
-		wal -i "$wallpaper" --cols16 -s -t
+		wal -i "$wallpaper" --cols16 -s -t --backend colorthief
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 
-		hellwal -i "$wallpaper" --check-contrast
+		matugen image "$wallpaper" --show-colors
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 	fi

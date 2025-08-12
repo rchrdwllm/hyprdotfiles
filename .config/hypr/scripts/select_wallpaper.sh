@@ -1,8 +1,12 @@
 #!/bin/bash
 
+export PATH="${PATH}:${HOME}/.local/bin/"
+
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 APP_NAME="Wallpaper selector"
 MODE=$(cat "$HOME/.config/hypr/color_mode")
+ROFI_LAUNCHER="$HOME/.config/rofi/launchers/type-1"
+ROFI_THEME='style-1'
 
 menu() {
     find "${WALLPAPER_DIR}" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) | awk '{print "img:"$0}'
@@ -18,6 +22,13 @@ validate_image_directory() {
 validate_images() {
 	if [ "$1" -eq 0 ]; then
 		notify-send -a "$APP_NAME" "No images found" "$WALLPAPER_DIR"
+		exit 1
+	fi
+}
+
+validate_image() {
+	if [ ! -f "$1" ]; then
+		echo "$APP_NAME" "Selected file is not a valid image" "$1"
 		exit 1
 	fi
 }
@@ -39,19 +50,19 @@ apply_wal_theme() {
 	wallpaper="$1"
     
     if [ "$MODE" = "light" ]; then
-		wal -i "$wallpaper" --cols16 -s -t -l
+		wal -i "$wallpaper" --cols16 -s -t -l --backend colorthief
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
-	
-		hellwal -i "$wallpaper" --check-contrast --light
+		
+		matugen image "$wallpaper" --show-colors --mode light
 
     	pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 	elif [ "$MODE" = "dark" ]; then
-		wal -i "$wallpaper" --cols16 -s -t
+		wal -i "$wallpaper" --cols16 -s -t --backend colorthief
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 
-		hellwal -i "$wallpaper" --check-contrast
+		matugen image "$wallpaper" --show-colors
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 	fi
@@ -64,10 +75,11 @@ apply_wal_theme() {
 }
 
 main() {
-    choice=$(menu | wofi -c ~/.config/wofi/wallpaper -s ~/.config/wofi/style-wallpaper.css --show dmenu --prompt "Select Wallpaper:" -n)
-    selected_wallpaper=$(echo "$choice" | sed 's/^img://')
+    image="$(ls $WALLPAPER_DIR | rofi -dmenu -i -p "  Select wallpaper: " -theme ${ROFI_LAUNCHER}/${ROFI_THEME}.rasi)"
+    selected_wallpaper=$WALLPAPER_DIR/$image
 
     validate_image_directory
+	validate_image "$selected_wallpaper"
 
     images=("$WALLPAPER_DIR"/*)
 

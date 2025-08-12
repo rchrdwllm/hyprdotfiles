@@ -1,4 +1,4 @@
-@import "../../.cache/hellwal/waybar-colors.css";
+@import "./matugen/colors-matugen.css";
 
 * {
   font-family: CartographCF Nerd Font, Iosevka Nerd Font;
@@ -17,7 +17,8 @@ window#waybar {
 }
 
 #window {
-  color: @foreground;
+  color: @secondary;
+  border: 1px solid alpha(@on_secondary, 0.5);
 }
 
 #clock,
@@ -32,11 +33,11 @@ window#waybar {
 #custom-power-menu,
 #custom-wallpaper,
 #custom-launcher,
+#window,
 #custom-spotify,
 #custom-weather,
 #custom-theme,
 #custom-notifications,
-#window,
 #custom-weather.severe,
 #custom-weather.sunnyDay,
 #custom-weather.clearNight,
@@ -47,7 +48,8 @@ window#waybar {
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
-  color: @foreground;
+  color: @on_background;
+  border: 1px solid alpha(@on_secondary, 0.5);
   padding: 2px 10px;
   background: alpha(@background, 0.7);
   border-radius: 8px;
@@ -55,28 +57,28 @@ window#waybar {
 }
 
 #custom-launcher {
-  color: @color6;
+  color: @primary;
   padding: 0 20px 0 20px;
   margin-left: 8px;
 }
 
 #cpu {
-  color: @color14;
+  color: @tertiary;
 }
 
 #memory {
-  color: @color4;
+  color: @secondary;
 }
 
 #workspaces button {
-  color: @color5;
+  color: @outline;
   box-shadow: inset 0 -3px transparent;
   margin-right: 0em;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
 }
 
 #workspaces button.active {
-  color: @color14;
+  color: @tertiary;
   margin-right: 0em;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
 }
@@ -104,21 +106,21 @@ window#waybar {
 }
 
 #custom-spotify {
-  color: @color10;
+  color: @on_background;
 }
 
 #custom-wallpaper {
   padding: 0 18px 0 12px;
-  color: @color14;
+  color: @primary;
 }
 
 #custom-notifications {
-  color: @color12;
+  color: @tertiary;
 }
 
 #custom-theme {
   padding: 0 18px 0 12px;
-  color: @color7;
+  color: @secondary;
 }
 
 #bluetooth,
@@ -132,42 +134,46 @@ window#waybar {
 
 #bluetooth {
   border-radius: 8px 0px 0px 8px;
-  color: @color12;
+  color: @tertiary;
   margin-left: 3px;
+  border: 1px solid alpha(@on_secondary, 0.5);
   border-right: none;
 }
 
 #network {
-  color: @color7;
+  color: @tertiary;
   padding-right: 14px;
+  border: 1px solid alpha(@on_secondary, 0.5);
   border-right: none;
   border-left: none;
 }
 
 #network.disconnected {
-  color: @color11;
+  color: @outline;
 }
 
 #pulseaudio {
-  color: @color7;
+  color: @tertiary;
+  border: 1px solid alpha(@on_secondary, 0.5);
   border-left: none;
   border-right: none;
 }
 
 #pulseaudio.muted {
-  color: @color11;
+  color: @outline;
 }
 
 #backlight {
   margin-right: 3px;
   padding-right: 8px;
-  color: @color7;
+  color: @tertiary;
+  border: 1px solid alpha(@on_secondary, 0.5);
   border-radius: 0 8px 8px 0;
   border-left: none;
 }
 
 #battery {
-  color: @color7;
+  color: @primary;
   border-radius: 8px;
   padding: 0 12px;
 }
@@ -176,16 +182,16 @@ window#waybar {
 #battery.warning,
 #battery.full,
 #battery.plugged {
-  color: @color15;
+  color: @error;
 }
 
 #clock {
-  color: @color12;
+  color: @primary;
   font-weight: bold;
 }
 
 #custom-power-menu {
-  color: @color14;
+  color: @secondary;
   margin-right: 8px;
   padding: 0 12px 0 10px;
 }

@@ -146,7 +146,7 @@
 	},
 	"custom/launcher": {
 		"format": "󰊠",
-		"on-click": "wofi --show drun -n"
+		"on-click": "~/.config/rofi/launchers/type-1/launcher.sh"
 	},
 	"custom/wallpaper": {
 		"format": "",

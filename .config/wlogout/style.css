@@ -1,4 +1,4 @@
-@import "../../.cache/hellwal/waybar-colors.css";
+@import "../../.config/waybar/matugen/colors-matugen.css";
 
 * {
   font-size: 18px;
@@ -23,8 +23,8 @@ button {
 
 button:hover,
 button:focus {
-  color: @color6;
-  background-color: rgba(0, 0, 0, 0.6);
+  color: @on_primary;
+  background-color: @primary;
   background-size: 40%;
 }
 

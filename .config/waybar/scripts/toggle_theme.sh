@@ -19,7 +19,7 @@ toggle_colors() {
 
         pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
       
-        hellwal -i "$WALLPAPER_FILE" --check-contrast --light
+        matugen image "$WALLPAPER_FILE" --show-colors --mode light
 
         pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 
@@ -30,27 +30,24 @@ toggle_colors() {
 
         pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
       
-        hellwal -i "$WALLPAPER_FILE" --check-contrast
+        matugen image "$WALLPAPER_FILE" --show-colors
 
         pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 
         gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3"
         gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
     fi
-}
 
-waybar_restart() {
-	if pgrep -x "waybar" >/dev/null; then
-		killall waybar
-	fi
-
-	waybar &
+    pywal-discord -t default
+    walogram -s > /dev/null
+    spicetify apply -q -n
+    swaync-client -rs
+    swaync-client --reload-css
 }
 
 main() {
     switch_theme
     toggle_colors
-    waybar_restart
 }
 
 main

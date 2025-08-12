@@ -58,19 +58,19 @@ apply_wal_theme() {
 	wallpaper="$1"
 
 	if [ "$MODE" = "light" ]; then
-		wal -i "$wallpaper" --cols16 -s -t -l
+		wal -i "$wallpaper" --cols16 -s -t -l --backend colorthief
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 	
-		hellwal -i "$wallpaper" --check-contrast --light
+		matugen image "$wallpaper" --show-colors --mode light
 
     	pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 	elif [ "$MODE" = "dark" ]; then
-		wal -i "$wallpaper" --cols16 -s -t
+		wal -i "$wallpaper" --cols16 -s -t --backend colorthief
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 
-		hellwal -i "$wallpaper" --check-contrast
+		matugen image "$wallpaper" --show-colors
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 	fi
@@ -80,14 +80,6 @@ apply_wal_theme() {
     spicetify apply -q -n
     swaync-client -rs
     swaync-client --reload-css
-}
-
-waybar_restart() {
-	if pgrep -x "waybar" >/dev/null; then
-		killall waybar
-	fi
-
-	waybar &
 }
 
 main() {
@@ -101,7 +93,6 @@ main() {
 
 	apply_wal_theme "$random_image"
 	set_new_wallpaper "$random_image"
-	waybar_restart
 	send_notification
 }
 

@@ -1,0 +1,37 @@
+[config]
+version_check = false
+
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "center"]
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/matugen-hyprland.conf'
+output_path = '~/.config/hypr/matugen/colors-matugen.conf'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/matugen-kitty.conf'
+output_path = '~/.config/kitty/matugen/colors-matugen.conf'
+post_hook="kill -SIGUSR1 $(pidof kitty)"
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/matugen-waybar.css'
+output_path = '~/.config/waybar/matugen/colors-matugen.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/matugen-swaync.css'
+output_path = '~/.config/swaync/matugen/colors-matugen.css'
+post_hook = 'swaync-client --reload-css'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/templates/matugen-hyprlock.conf'
+output_path = '~/.config/hypr/hyprlock/matugen/colors-matugen.conf'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/matugen-rofi.rasi'
+output_path = '~/.config/rofi/matugen/colors-matugen.rasi'
+
+[templates.clipse]
+input_path = '~/.config/matugen/templates/matugen-clipse.json'
+output_path = '~/.config/clipse/matugen/colors-matugen.json'
