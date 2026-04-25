@@ -1,0 +1,35 @@
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 1: invalid field blur: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 2: invalid field ignorezero: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 3: invalid field blurpopups: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 5: invalid field blur: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 6: invalid field logout_dialog: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 8: invalid field blur: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 9: invalid field ignorezero: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 10: invalid field rofi: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 12: invalid field swaync-control-center: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 13: invalid field blur: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 14: invalid field blur: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 15: invalid field ignorezero: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 16: invalid field ignorezero: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 17: invalid field type ignorealpha
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 18: invalid field type ignorealpha
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 20: invalid field noanim: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 21: invalid field noanim: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/hyprland.conf at line 14: Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 1: invalid field blur: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 2: invalid field ignorezero: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 3: invalid field blurpopups: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 5: invalid field blur: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 6: invalid field logout_dialog: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 8: invalid field blur: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 9: invalid field ignorezero: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 10: invalid field rofi: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 12: invalid field swaync-control-center: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 13: invalid field blur: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 14: invalid field blur: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 15: invalid field ignorezero: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 16: invalid field ignorezero: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 17: invalid field type ignorealpha
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 18: invalid field type ignorealpha
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 20: invalid field noanim: missing a value
+Config error in file /home/rchrdwllm/.config/hypr/configs/layer_rules.conf at line 21: invalid field noanim: missing a value
+

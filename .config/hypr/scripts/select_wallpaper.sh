@@ -39,7 +39,7 @@ set_new_wallpaper() {
     [ -L "$HOME/Pictures/wallpaper.png" ] && rm "$HOME/Pictures/wallpaper.png"
     ln -s "$wallpaper" "$HOME/Pictures/wallpaper.png"
 
-	swww img "$wallpaper" --transition-type grow --transition-fps 120 --transition-duration 1 --transition-bezier 0.65,0,0.35,1 --transition-pos 0.794,0.972 --transition-step 7
+	awww img "$wallpaper" --transition-type grow --transition-fps 120 --transition-duration 1 --transition-bezier 0.65,0,0.35,1 --transition-pos 0.794,0.972 --transition-step 7
 }
 
 send_notification() {
@@ -54,7 +54,7 @@ apply_wal_theme() {
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 		
-		matugen image "$wallpaper" --show-colors --mode light
+		matugen image "$wallpaper" --source-color-index 0 --type scheme-vibrant --mode light
 
     	pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 	elif [ "$MODE" = "dark" ]; then
@@ -62,7 +62,7 @@ apply_wal_theme() {
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 
-		matugen image "$wallpaper" --show-colors
+		matugen image "$wallpaper" --source-color-index 0 --type scheme-vibrant
 
 		pgrep -x "waybar" > /dev/null && killall -SIGUSR2 waybar
 	fi
